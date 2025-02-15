@@ -1,10 +1,15 @@
 <template>
   <div id="app">
-    <nav>
+    <nav> <!-- Aqui cria links / rotas -->
+      <!-- rota: Home -->
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <!-- rota: About -->
+      <router-link to="/about">Sobre</router-link> |
+      <router-link to="/warehouses">Galpões Cadastrados</router-link> |
+      <router-link to="/warehouses/new">Cadastrar Galpão</router-link>
     </nav>
-    <router-view/>
+
+    <router-view/> <!-- Aqui carrega o conteúdo de forma dinâmica -->
   </div>
 </template>
 
