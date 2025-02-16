@@ -2,7 +2,9 @@
     <div>
         <h1>Galpões Cadastrados</h1>
 
-        <div v-for="w in warehouses" :key="w.id">
+        <input class="form" type="text" placeholder="Buscar galpão" v-model="term">
+
+        <div v-for="w in filterWareHouse" :key="w.id">
             <WareHouse
                 :id = "w.id"
                 :name = "w.name"
@@ -27,7 +29,8 @@
 
         data(){
             return {
-                warehouses:[]
+                warehouses:[],
+                term: ""
             }
         },
 
@@ -50,10 +53,20 @@
                 this.warehouses = result;
                 return this.warehouses;
             }
+        },
+
+        computed: {
+            filterWareHouse() {
+                return this.warehouses.filter(w => {
+                    return w.name.toLowerCase().includes(this.term.toLocaleLowerCase());
+                })
+            }
         }
     }
 </script>
 
 <style>
-
+    .form {
+        margin-bottom: 20px;
+    }
 </style>
