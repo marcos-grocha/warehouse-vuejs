@@ -1,10 +1,9 @@
 <template>
     <div>
         <h1>Galpões Cadastrados</h1>
-
         <v-text-field label="Buscar galpão" v-model="term" class="my-5"></v-text-field>
 
-        <v-card dark>
+        <v-card>
             <v-card-text>
                 <WareHouseTable :warehouses="filterWareHouse"/>
             </v-card-text>
@@ -13,14 +12,12 @@
 </template>
 
 <script>
-    // Importar o componente warehouse
-    import WareHouse from '@/components/Warehouse.vue';
+    // Importar o componente warehouse-table
     import WareHouseTable from '@/components/WareHouseTable.vue'
 
     export default {
         name: 'WareHouseList',
         components: {
-            WareHouse,
             WareHouseTable
         },
 
@@ -53,7 +50,7 @@
         },
 
         computed: {
-            filterWareHouse() {
+            filterWareHouse() { // Faz a busca padronizando letras minúsculas
                 return this.warehouses.filter(w => {
                     return w.name.toLowerCase().includes(this.term.toLocaleLowerCase());
                 })
