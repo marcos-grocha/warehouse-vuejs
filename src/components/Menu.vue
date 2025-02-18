@@ -1,12 +1,22 @@
 <template>
-    <nav> <!-- Aqui cria links / rotas -->
-      <!-- rota: Home -->
-      <router-link to="/">Home</router-link> |
-      <!-- rota: About -->
-      <router-link to="/about">Sobre</router-link> |
-      <router-link to="/warehouses">Galpões Cadastrados</router-link> |
-      <router-link to="/warehouses/new">Cadastrar Galpão</router-link>
-    </nav>
+    <v-container>
+        <v-row>
+            <v-col>
+                <v-toolbar flat color="grey lighten-4">
+                    <v-toolbar-title>WareHouses</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <nav> <!-- Aqui cria links / rotas -->
+                      <!-- rota: Home -->
+                      <v-btn text color="grey" to="/">Home</v-btn> |
+                      <!-- rota: About -->
+                      <v-btn text color="grey" to="/about">Sobre</v-btn> |
+                      <v-btn text color="grey" to="/warehouses">Galpões Cadastrados</v-btn> |
+                      <v-btn text color="grey" to="/warehouses/new">Cadastrar Galpão</v-btn>
+                    </nav>
+                </v-toolbar>
+            </v-col>
+        </v-row>
+    </v-container>
 </template>
 
 <script>
