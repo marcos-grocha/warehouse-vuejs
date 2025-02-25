@@ -6,7 +6,7 @@ App Frontend feito para complementar o [Projeto Backend](https://github.com/marc
 ## Tecnologias
 - **HTML5** - Estrutura básica da página.
 - **CSS** - Estilização do layout.
-- **Vue.js** - Framework JavaScript para construção da interface interativa.
+- **Vue.js 2.0** - Framework JavaScript para construção da interface interativa.
 - **Vuetify** - Biblioteca de componentes baseada no Material Design, que fornece uma ampla gama de elementos prontos para uso, facilitando o desenvolvimento de interfaces modernas e responsivas.
 
 ### Pré-requisito
